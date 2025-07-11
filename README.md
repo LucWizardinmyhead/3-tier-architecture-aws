@@ -1,21 +1,8 @@
 # 3-tier-architecture-aws
 
-┌───────────────────────────────────────┐
-│            AWS ARCHITECTURE           │
-├─────────────┐           ┌─────────────┤
-│   EC2       │           │    RDS      │
-│ (Public     │           │  (Private   │
-│  Subnet)    │           │   Subnet)   │
-│             │           │             │
-│  ┌───────┐  │           │  ┌───────┐  │
-│  │       │◄─┼───────────┼─►│       │  │
-│  │  Web  │  │           │  │ MySQL │  │
-│  │ Server│  │           │  │  DB   │  │
-│  └───────┘  │           │  └───────┘  │
-│      ▲      │           │             │
-└──────┼──────┘           └─────────────┘
-       │
-       ▼
-┌───────────────────────────────────────┐
-│            Users                      │
-└───────────────────────────────────────┘
+VPC with 1 EC2 instance and RDS database, provisioned via Terraform.
+
+## Services
+- **1 EC2 Instance**: Public subnet (HTTPS/HTTP access)
+- **1 RDS Instance**: Private subnet (MySQL/PostgreSQL)
+- **VPC**: With 6 subnets and NACLs
