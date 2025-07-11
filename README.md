@@ -12,7 +12,7 @@ flowchart TD
     Internet -->|HTTP/HTTPS| EC2
     EC2 -->|Database| RDS
 
-    subgraph AWS_VPC[VPC]
+    subgraph --> AWS_VPC[VPC]
 
 subgraph PublicSubnet[Public Subnet]
             EC2[EC2 Instance\nAmazon Linux 2\nt3.micro]
