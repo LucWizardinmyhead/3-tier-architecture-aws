@@ -15,10 +15,10 @@ flowchart TD
     subgraph AWS_VPC[VPC]
 
 subgraph PublicSubnet[Public Subnet]
-            EC2[EC2 Instance\nAmazon Linux 2\nt3.micro]
+            EC2[EC2 Instance\Amazon Linux 2t3.micro]
         end
         subgraph PrivateSubnet[Private Subnet]
-            RDS[(RDS MySQL\nPrivate Access Only)]
+            RDS[(RDS db.t3.micro MySQL\Private Access Only)]
         end
     end
 ```
